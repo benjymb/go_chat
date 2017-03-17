@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/lib/angular.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Filtros :: Filter</h1>
+			<h4>en AngularJS</h4>
+			<hr>
+			<p>
+				Filtro de texto: {{ "FernNaNdO" | uppercase }}
+				<br>
+				Filtro de moneda: {{ "1300" | currency: 'S/' }}
+			</p>
+			<h1>ng-model</h1>
+			<hr>
+			<p> 
+				Su nombre: {{ nombre }}
+				<br>
+				<input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre">
+			</p>
+			<p>
+				Seleccione el país: {{ pais }}
+				<select class="form-control" ng-model="pais">
+					<option value="1">Costa Rica</option>
+					<option value="2">México</option>
+					<option value="3" selected="selected">Perú</option>
+				</select>
+			</p>
+		</div>
+	</body>
+</html>
